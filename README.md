@@ -6,3 +6,5 @@ Amaç, elektronik ve gömülü sistemler alanında başlangıç seviyesinde prat
 2-POTASYOMETRE İLE LED YAKIP SÖNDÜRME UYGULAMASI:Bu program bir potasyometreyi okur ve bu değere göre bir ledin parlaklığını kontrol eder.
 3-BUTON İLE LED PARLAKLIĞI UYGULAMASI:Bu proje, Arduino ile bir LED’in parlaklığını butona her basıldığında 5 birim artırarak kontrol etmeyi sağlar.  
 Arduino PWM (Pulse Width Modulation) kullanarak LED parlaklığını kademeli olarak değiştirir.
+4-LDR(FOTOREZİSTÖR) İLE LED PARLAKLIĞI UYGULAMASI:Bu proje, Arduino kullanarak bir LDR ile LED parlaklığını ortam ışığına göre otomatik olarak ayarlamayı sağlar.  
+Ortamdaki ışık arttıkça LED’in parlaklığı düşer, ortam karardıkça LED’in parlaklığı artar.

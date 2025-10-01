@@ -8,3 +8,4 @@ Amaç, elektronik ve gömülü sistemler alanında başlangıç seviyesinde prat
 Arduino PWM (Pulse Width Modulation) kullanarak LED parlaklığını kademeli olarak değiştirir.
 4-LDR(FOTOREZİSTÖR) İLE LED PARLAKLIĞI UYGULAMASI:Bu proje, Arduino kullanarak bir LDR ile LED parlaklığını ortam ışığına göre otomatik olarak ayarlamayı sağlar.  
 Ortamdaki ışık arttıkça LED’in parlaklığı düşer, ortam karardıkça LED’in parlaklığı artar.
+5-HESAP MAKİNESİ UYGULAMASI:Bu proje, butonlar ve dirençler kullanarak yapılan basit bir Arduino hesap makinesidir. Her butona basıldığında farklı bir işlem yapılır (toplama, çıkarma, çarpma, bölme ). Arduino başlangıç seviyesinde giriş/çıkış kontrollerini öğrenmek için hazırlanmıştır.

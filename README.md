@@ -13,5 +13,6 @@ Ortamdaki ışık arttıkça LED’in parlaklığı düşer, ortam karardıkça 
 7-SERVO MOTORU TARAMA UYGULAMASI=Bu proje, Arduino'nun temel özelliklerini kullanarak bir standart servo motoru 0 dereceden 180 dereceye ve ardından tekrar 0 dereceye kadar sürekli olarak hareket ettirir (sweep - tarama hareketi).
 8-POTASYOMETRE İLE SERVO MOTOR KONTROLÜ UYGULAMASI:Bu proje, bir potansiyometreyi çevirerek bir servo motorun açısını canlı olarak kontrol etmeyi sağlayan temel bir Arduino uygulamasıdır. Potansiyometre bir düğme gibi davranarak motorun pozisyonunu hassas bir şekilde belirler.
 9-FOTOREZİSTOR(LDR) İLE SERVO MOTOR KONTROLÜ UYGULAMASI:Bu proje, bir Fotorezistor (LDR) kullanarak ortamdaki ışık şiddetini ölçer ve bu ışık seviyesine bağlı olarak bir servo motorun açısını ayarlar. Proje, ışık seviyesi düştükçe (karardıkça) servo motoru bir yöne, ışık seviyesi yükseldikçe (aydınlandıkça) diğer yöne hareket ettirir.
-10-ULTRASONİK MESAFE SENSÖRĞ:Bu proje, bir HC-SR04 Ultrasonik Mesafe Sensörü kullanarak nesneler arasındaki uzaklığı ölçer ve sonucu Arduino Seri Monitör'e yazdırır.Kod, ultrasonik mesafeyi hesaplamak için sesin hızını ve yankının geri dönüş süresini kullanır.
-11-GÜNEŞ TAKİP SİSTEMİ
+10-ULTRASONİK MESAFE SENSÖRÜ:Bu proje, bir HC-SR04 Ultrasonik Mesafe Sensörü kullanarak nesneler arasındaki uzaklığı ölçer ve sonucu Arduino Seri Monitör'e yazdırır.Kod, ultrasonik mesafeyi hesaplamak için sesin hızını ve yankının geri dönüş süresini kullanır.
+11-GÜNEŞ TAKİP SİSTEMİ/GÜNEŞ PANELİ UYGULAMASI
+12-ULTRASONİK MESAFE UYARI SİSTEMİ UYGULAMASI

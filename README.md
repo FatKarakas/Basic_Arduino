@@ -16,3 +16,4 @@ Ortamdaki ışık arttıkça LED’in parlaklığı düşer, ortam karardıkça 
 10-ULTRASONİK MESAFE SENSÖRÜ:Bu proje, bir HC-SR04 Ultrasonik Mesafe Sensörü kullanarak nesneler arasındaki uzaklığı ölçer ve sonucu Arduino Seri Monitör'e yazdırır.Kod, ultrasonik mesafeyi hesaplamak için sesin hızını ve yankının geri dönüş süresini kullanır.
 11-GÜNEŞ TAKİP SİSTEMİ/GÜNEŞ PANELİ UYGULAMASI
 12-ULTRASONİK MESAFE UYARI SİSTEMİ UYGULAMASI
+13-PARK SENSÖRÜ UYGULAMASI

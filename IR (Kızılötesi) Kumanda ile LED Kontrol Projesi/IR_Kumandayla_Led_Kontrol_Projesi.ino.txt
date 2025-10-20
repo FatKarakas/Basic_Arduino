@@ -1,0 +1,30 @@
+#include<IRremote.h>
+#define led 9
+int IRPIN=2;
+unsigned long localData=4278238976;
+void setup()
+{
+  Serial.begin(9600);
+  IrReceiver.begin(IRPIN,ENABLE_LED_FEEDBACK);
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+ if(IrReceiver.decode())
+ {
+   unsigned long data=IrReceiver.decodedIRData.decodedRawData;
+   Serial.println(data);
+   IrReceiver.resume();
+   if(data == localData)
+   {
+     digitalWrite(led,HIGH);
+     delay(500);
+   }
+   else if(data)
+   {
+     digitalWrite(led,LOW);
+   }
+   delay(500);
+ }
+}

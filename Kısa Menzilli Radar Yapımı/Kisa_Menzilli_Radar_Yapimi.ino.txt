@@ -1,0 +1,56 @@
+#include <Servo.h> 
+
+const int trigPin = 8; /* Sensorun trig pini Arduinonun 6 numaralı ayağına bağlandı */
+const int echoPin = 7;  /* Sensorun echo pini Arduinonun 7 numaralı ayağına bağlandı */
+
+Servo radarServosu; 
+
+int aci = 0;
+
+long mesafeOlcumu(){
+  long sure;
+  long uzaklik;
+  digitalWrite(trigPin, LOW); /* sensor pasif hale getirildi */
+  delayMicroseconds(5);
+  digitalWrite(trigPin, HIGH); /* Sensöre ses dalgasının üretmesi için emir verildi */
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);  /* Yeni dalgaların üretilmemesi için trig pini LOW konumuna getirildi */ 
+  sure = pulseIn(echoPin, HIGH, 11600); /* ses dalgasının geri dönmesi icin gecen sure ölcülüyor */
+  uzaklik= sure /29.1/2; /* ölçülen sure uzaklığe çevriliyor */     
+  if(uzaklik > 200 || uzaklik < 1 )
+    uzaklik = 200;
+  return uzaklik;
+}
+
+void ekranaYazdir(int aciDegeri, long uzaklikDegeri){
+    Serial.print("aci= ");
+    Serial.print(aciDegeri);
+    
+    Serial.print("uzaklik= ");
+    Serial.println(uzaklikDegeri);
+}
+
+void setup(){
+  pinMode(trigPin, OUTPUT); /* trig pini cikis olarak ayarlandi */
+  pinMode(echoPin,INPUT); /* echo pini giris olarak ayarlandi */
+  
+  radarServosu.attach(9);
+  
+  Serial.begin(9600); /* Seri haberleşme başlatıldı */
+}
+
+void loop()
+{
+  for(aci = 0; aci < 180; aci += 10) /* radarımız 0dan 180 kadar 10ar 10ar dönecektir */
+  { 
+    radarServosu.write(aci); /* radari donduruyoruz */
+    delay(15); /* radarin donmesini bekliyoruz */
+    ekranaYazdir(aci, mesafeOlcumu());
+  } 
+  for(aci = 180; aci>=1; aci-=10) /* radarımız 180dan 0 kadar 10ar 10ar dönecektir */
+  {                                
+    radarServosu.write(aci); /* radarı donduruyoruz */
+    delay(15); /* radarın dönmesini bekliyoruz */
+    ekranaYazdir(aci, mesafeOlcumu());
+  } 
+}

@@ -1,0 +1,30 @@
+#define buzzer 9 
+const int BUTON_SAYISI = 16; 
+
+int buton_pinleri[BUTON_SAYISI] = {  2, 3, 4, 5, 6, 7, 8, 10, 11, 12,A0, A1, A2, A3, A4, A5 };
+int frekanslar[BUTON_SAYISI] = {262, 294, 330, 349, 392, 440, 494, 523, 587, 659, 698, 784, 880, 988, 1046, 1175 };
+
+void setup() {
+    pinMode(buzzer, OUTPUT); 
+    for (int i = 0; i < BUTON_SAYISI; i++)  
+    {
+        pinMode(buton_pinleri[i], INPUT); 
+    }
+}
+
+void loop() {
+    for(int i = 0; i < BUTON_SAYISI; i++)
+    {
+        if (digitalRead(buton_pinleri[i]) == HIGH)
+        {
+            tone(buzzer, frekanslar[i]);
+            delay(200);
+            noTone(buzzer);
+            delay(50);
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,33 @@
+#include <Adafruit_LiquidCrystal.h>
+#define sensor A0
+int seconds = 0;
+Adafruit_LiquidCrystal lcd_1(0);
+
+void setup()
+{
+  lcd_1.begin(16, 2);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int deger=analogRead(sensor);
+  float voltaj=deger* 5.0;
+  voltaj /=1024.0;
+  Serial.print("voltaj:");
+  Serial.println(voltaj);
+  float temp=(voltaj-0.5)*100;
+  Serial.print("sicaklik:");
+  Serial.println(temp);
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("voltaj");
+  lcd_1.setCursor(8, 0);
+  lcd_1.print(voltaj);
+  lcd_1.setCursor(0, 1);
+  lcd_1.print("sicaklik");
+  lcd_1.setCursor(10, 1);
+  lcd_1.print(temp);
+  delay(500);
+  lcd_1.clear();
+    
+}

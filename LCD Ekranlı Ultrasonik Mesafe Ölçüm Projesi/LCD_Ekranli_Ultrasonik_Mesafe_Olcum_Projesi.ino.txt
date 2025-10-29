@@ -1,0 +1,33 @@
+#define trig 8
+#define echo 7
+float sure,mesafe;
+#include <Adafruit_LiquidCrystal.h>
+int seconds = 0;
+Adafruit_LiquidCrystal lcd_1(0);
+
+void setup()
+{
+  lcd_1.begin(16, 2);
+  Serial.begin(9600);
+  pinMode(trig,OUTPUT);
+  pinMode(echo,INPUT);
+  digitalWrite(trig,LOW);
+}
+
+void loop()
+{
+  digitalWrite(trig,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig,LOW); 
+  sure=pulseIn(echo,HIGH);
+  mesafe=(sure*0.03432)/2;
+  Serial.print("mesafe");
+  Serial.println(mesafe);
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("mesafe");
+  lcd_1.setCursor(8, 0);
+  lcd_1.print(mesafe);
+  delay(500); 
+  lcd_1.clear();
+
+}

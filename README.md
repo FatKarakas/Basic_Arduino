@@ -20,3 +20,4 @@ Ortamdaki ışık arttıkça LED’in parlaklığı düşer, ortam karardıkça 
 14-KALDIĞI YERİ HATIRLAYAN SERVO MOTOR
 15-KISA MENZİLLİ RADAR YAPIMI
 16-MİNİ PİYANO YAPIMI
+17-SİCAKLİK ÖLÇÜM PROJESİ

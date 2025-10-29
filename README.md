@@ -22,3 +22,4 @@ Ortamdaki ışık arttıkça LED’in parlaklığı düşer, ortam karardıkça 
 16-MİNİ PİYANO YAPIMI
 17-SİCAKLİK ÖLÇÜM PROJESİ
 18-LCD EKRANLI ULTRASONİK MESAFE ÖLÇÜM PROJESİ
+19-TRAFİK IŞIKLARI

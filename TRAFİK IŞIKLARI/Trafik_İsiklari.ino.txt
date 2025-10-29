@@ -1,0 +1,21 @@
+#define kirmizi 2
+#define sari 3
+#define yesil 4
+void setup()
+{
+  pinMode(kirmizi, OUTPUT);
+  pinMode(sari,OUTPUT);
+  pinMode(yesil,OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(kirmizi, HIGH);
+  delay(5000); 
+  digitalWrite(kirmizi,LOW);
+  digitalWrite(sari, HIGH);
+  delay(1000); 
+  digitalWrite(sari,LOW);
+  digitalWrite(yesil,HIGH);
+  delay(3000);
+}

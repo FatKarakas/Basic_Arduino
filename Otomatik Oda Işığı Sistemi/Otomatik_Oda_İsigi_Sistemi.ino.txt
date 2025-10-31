@@ -1,0 +1,18 @@
+#define LED 9   
+#define LDR A0
+int LDRdegeri = 0;
+int parlaklik = 0;
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(LDR, INPUT);
+  Serial.begin(9600);
+}
+void loop() {
+  LDRdegeri = analogRead(LDR);
+  Serial.println(LDRdegeri);
+  parlaklik = map(LDRdegeri, 900, 300, 0, 255);
+  // Değer sınırları dışına çıkmasın
+  parlaklik = constrain(parlaklik, 0, 255);
+  analogWrite(LED, parlaklik);
+  delay(100);
+}
